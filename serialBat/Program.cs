@@ -1,8 +1,6 @@
 ﻿using System;
 using System.IO.Ports;
 using System.Windows.Forms;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace serialBat
 {
@@ -73,6 +71,7 @@ namespace serialBat
                 var plstat = SystemInformation.PowerStatus.PowerLineStatus.ToString();
                 int battrue = int.Parse(SystemInformation.PowerStatus.BatteryLifePercent.ToString("P0"));
                 if ((pwrstat.Equals("true")) && (plstat.Equals("Online") ) ){ serOut.WriteLine("1"); }
+                else if ((pwrstat.Equals("true"))&&(plstat!="Online")){ serOut.WriteLine("0"); }
                 switch (battden)
                 {
                     case "true":
