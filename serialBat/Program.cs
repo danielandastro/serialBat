@@ -79,19 +79,13 @@ namespace serialBat
                         serOut.WriteLine(battrue.ToString());
                         break;
                     case "outof5":
-                        double temp = battrue / 20;
-                       var batrep = Math.Round(temp, 0, MidpointRounding.AwayFromZero);
-                        serOut.WriteLine(batrep.ToString());
+                        serOut.WriteLine(Math.Round(battrue / 5.0, 0, MidpointRounding.AwayFromZero).ToString());
                         break;
                     case "outof3":
-                        temp = battrue / 3;
-                        batrep = Math.Round(temp, 0, MidpointRounding.AwayFromZero);
-                        serOut.WriteLine(batrep.ToString());
+                        serOut.WriteLine(Math.Round(battrue / 3.0, 0, MidpointRounding.AwayFromZero).ToString());
                         break;
                     case "outof10":
-                        temp = battrue / 10;
-                        batrep = Math.Round(temp, 0, MidpointRounding.AwayFromZero);
-                        serOut.WriteLine(batrep.ToString());
+                        serOut.WriteLine(Math.Round(battrue/10.0, 0, MidpointRounding.AwayFromZero).ToString());
                         break;
                     default:
                         Console.WriteLine("Please check battden.ini");
